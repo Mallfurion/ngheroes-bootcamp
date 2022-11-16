@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-background: #fff;
+  --color-border: #bbb;
+  --color-text: #333;
+  --color-accent: #28a745;
+  --color-accent-hover: #22863a;
+  --color-error: #b00;
+
+  --drop-shadow: 0 2px 8px 1px rgba(18, 18, 18, 0.3);
+  --animation-fade: all 0.1s ease-out;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.67rem;
+}
+
+header {
+  padding: 0 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+/* Search form component styles */
+
+.search-form {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.input {
+  border-radius: 8px 0 0 8px;
+  border: 2px solid var(--color-border);
+  border-right: 0;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  flex: 1 1 auto;
+  transition: var(--animation-fade);
+  min-width: 8rem;
+}
+
+.input:focus {
+  border-radius: 0;
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.button {
+  border: 0;
+  font-size: 1.2rem;
+  appearance: none;
+  background: var(--color-accent);
+  color: var(--color-background);
+  padding: 1rem 2rem;
+  border-radius: 0 8px 8px 0;
+  height: 4rem;
+  transition: var(--animation-fade);
+}
+
+.button:hover {
+  background: var(--color-accent-hover);
+  border-radius: 0;
+}
+
+/* Error styles on Search Form */
+
+.error .input {
+  border-color: var(--color-error);
+}
+
+.error .button {
+  background: var(--color-error);
+}
+
+/* Repo card component styles */
+
+.repo-card {
+  display: block;
+  border: 1px solid var(--color-border);
+  transition: var(--animation-fade);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.repo-card:hover {
+  box-shadow: var(--drop-shadow);
+  border-left: 4px solid var(--color-accent);
+  padding-left: 1rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.description {
+  max-height: 4.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
