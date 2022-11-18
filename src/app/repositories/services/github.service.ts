@@ -1,14 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, tap } from 'rxjs';
-
-export interface IRepository {
-  id?: number;
-  name?: string;
-  description?: string;
-  owner: { login: string };
-  url?: string;
-}
+import { IRepository } from '../models/repository.interface';
 
 @Injectable({
   providedIn: 'root'

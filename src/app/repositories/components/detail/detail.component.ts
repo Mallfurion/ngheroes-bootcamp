@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { GithubService, IRepository } from '../../services/github.service';
+import { IRepository } from '../../models/repository.interface';
+import { GithubService } from '../../services/github.service';
 
 @Component({
   selector: 'app-detail',
