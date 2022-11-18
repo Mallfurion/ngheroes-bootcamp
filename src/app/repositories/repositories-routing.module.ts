@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'github',
     children: [
       { path: '', component: ListComponent },
-      { path: 'detail/:owner/:repo', component: DetailComponent }
+      { path: 'detail/:owner/:name', component: DetailComponent }
     ]
   }
 ];

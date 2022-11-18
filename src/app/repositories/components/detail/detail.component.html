@@ -1,1 +1,4 @@
-<p>detail works!</p>
+<div *ngIf="repoDetail$ | async as details">
+  <div class="title" [innerHTML]="details.name"></div>
+  <div class="description" [innerHTML]="details.description"></div>
+</div>
