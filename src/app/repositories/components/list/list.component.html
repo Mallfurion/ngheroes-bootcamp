@@ -1,0 +1,4 @@
+<app-repo-search></app-repo-search>
+<div class="repositories">
+  <app-repo-card *ngFor="let item of repositories$ | async" [item]="item"></app-repo-card>
+</div>
