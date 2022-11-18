@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+
+<header>
+  <h1>Welcome to {{ title }}!</h1>
+</header>
+<main class="container">
+  <div class="repo-card" *ngFor="let item of data" [id]="'repo-' + item.id" (click)="openNewTab(item.url)">
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.description }}</p>
+  </div>
+</main>

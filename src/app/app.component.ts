@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { mockedData } from './data';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngheroes-bootcamp';
+  title = 'JS Heroes Bootcamp';
+  data = mockedData;
+
+  openNewTab(url: string) {
+    window.open(url, '_blank');
+  }
 }
