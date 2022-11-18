@@ -6,9 +6,12 @@ import { RepoSearchComponent } from './components/repo-search/repo-search.compon
 import { DetailComponent } from './components/detail/detail.component';
 import { RepositoriesRoutingModule } from './repositories-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './inteceptors/auth.interceptor';
 
 @NgModule({
   declarations: [ListComponent, RepoCardComponent, RepoSearchComponent, DetailComponent],
-  imports: [CommonModule, FormsModule, RepositoriesRoutingModule]
+  imports: [CommonModule, FormsModule, RepositoriesRoutingModule],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
 })
 export class RepositoriesModule {}
