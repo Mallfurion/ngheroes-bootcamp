@@ -1,2 +1,4 @@
-<h3 class="title">{{ item.name }}</h3>
-<p class="description">{{ item.description }}</p>
+<div [routerLink]="item.url">
+  <h3 class="title">{{ item.name }}</h3>
+  <p class="description">{{ item.description }}</p>
+</div>

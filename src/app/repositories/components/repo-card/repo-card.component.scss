@@ -10,7 +10,7 @@
 
   &:hover {
     box-shadow: var(--drop-shadow);
-    border-left: 4px solid var(--color-accent);
+    background: linear-gradient(90deg, var(--color-accent) 0, var(--color-accent) 4px, transparent 5px);
     transform: scale(1.025);
   }
 

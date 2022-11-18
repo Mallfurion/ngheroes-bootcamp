@@ -7,7 +7,6 @@ import { mockedData } from './data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'JS Heroes Bootcamp';
   data = mockedData;
   searchValue: string = '';
 
