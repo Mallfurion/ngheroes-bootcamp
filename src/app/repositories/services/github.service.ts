@@ -1,14 +1,27 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { mockedData } from 'src/app/data';
+import { map, Observable, of, tap } from 'rxjs';
+
+export interface IRepository {
+  id?: number;
+  name?: string;
+  description?: string;
+  owner: { login: string };
+  url?: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  constructor() {}
+  apiURL = 'https://api.github.com/';
+  constructor(private http: HttpClient) {}
 
-  getRepositories() {
-    return of(mockedData);
+  getRepositories(): Observable<IRepository[]> {
+    return this.http.get(`${this.apiURL}search/repositories?q=stars:>10000`).pipe(map((res: any) => res.items));
+  }
+
+  getRepositoryDetail(owner: any, name: any): Observable<IRepository> {
+    return this.http.get<IRepository>(`${this.apiURL}repos/${owner}/${name}`);
   }
 }
