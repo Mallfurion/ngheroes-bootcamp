@@ -9,6 +9,10 @@ export class RepoCardComponent implements OnInit {
   @HostBinding('class.repo-card') containerClass = true;
   @Input() item: any;
 
+  get link() {
+    return `detail/${this.item.owner.login}/${this.item.name}`;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
