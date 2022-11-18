@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '/src/assets/scss/reset.scss';
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.67rem;
+  font-family: var(--font-family-display);
+}
+
+main {
+  @apply mt-12;
+}
+
+.container {
+  @apply mx-auto;
+}

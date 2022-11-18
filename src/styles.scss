@@ -1,52 +1,42 @@
-/*
- * Tailwind
- */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/*
- * Bootcamp CSS
- */
 :root {
+  --color-primary: #0b1b44;
   --color-background: #fff;
   --color-border: #bbb;
-  --color-text: #333;
-  --color-accent: #28a745;
-  --color-accent-hover: #22863a;
+
+  --color-text: #202022;
+  --color-accent: #0098ff;
+  --color-accent-hover: #0b1b44;
   --color-error: #b00;
+
+  --font-family-base: system-ui, sans-serif;
+  --font-family-display: 'Ubuntu', sans-serif;
 
   --drop-shadow: 0 2px 8px 1px rgba(18, 18, 18, 0.3);
   --animation-fade: all 0.1s ease-out;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: var(--color-text);
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  font-size: 1.67rem;
-}
+@import '/src/assets/scss/main.scss';
 
 header {
-  padding: 0 1rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  background: var(--color-text);
+  background: var(--color-primary);
   color: var(--color-background);
-}
+  position: relative;
+  display: flex;
 
-main {
-  padding: 2rem 1rem;
+  img.bear {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .header-content {
+    max-width: 75rem;
+    margin-inline: auto;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 /* Search form component styles */
@@ -58,7 +48,7 @@ main {
 
 .input {
   border-radius: 8px 0 0 8px;
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-right: 0;
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -110,23 +100,23 @@ main {
   margin-bottom: 1rem;
   border-radius: 8px;
   cursor: pointer;
-}
 
-.repo-card:hover {
-  box-shadow: var(--drop-shadow);
-  border-left: 4px solid var(--color-accent);
-  padding-left: 1rem;
-}
+  &:hover {
+    box-shadow: var(--drop-shadow);
+    border-left: 4px solid var(--color-accent);
+    padding-left: 1rem;
+  }
 
-.title {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
+  .title {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
 
-.description {
-  max-height: 4.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  .description {
+    max-height: 4.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
