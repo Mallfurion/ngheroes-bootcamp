@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { RepositoriesModule } from './repositories/repositories.module';
 import { HeaderComponent } from './components/header/header.component';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -18,7 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
     FormsModule,
     RepositoriesModule,
     StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
