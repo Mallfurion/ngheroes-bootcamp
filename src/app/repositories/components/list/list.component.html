@@ -1,4 +1,13 @@
 <app-repo-search></app-repo-search>
+
 <div class="repositories">
+  <div *ngIf="isLoading$ | async">
+    <span>Loading ...</span>
+  </div>
+
+  <div *ngIf="error$ | async as error">
+    <span [innerHTML]="error"></span>
+  </div>
+
   <app-repo-card *ngFor="let item of repositories$ | async" [item]="item"></app-repo-card>
 </div>

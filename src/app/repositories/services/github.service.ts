@@ -11,7 +11,7 @@ export class GithubService {
   constructor(private http: HttpClient) {}
 
   getRepositories(): Observable<IRepository[]> {
-    return this.http.get(`${this.apiURL}search/repositories?q=stars:>10000`).pipe(map((res: any) => res.items));
+    return this.http.get(`${this.apiURL}search/repositoriesz?q=stars:>10000`).pipe(map((res: any) => res.items));
   }
 
   getRepositoryDetail(owner: any, name: any): Observable<IRepository> {

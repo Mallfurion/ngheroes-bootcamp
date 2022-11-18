@@ -8,10 +8,20 @@ import { RepositoriesRoutingModule } from './repositories-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './inteceptors/auth.interceptor';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { reducers } from './store/reducers';
+import { RepositoriesEffects } from './store/effects';
 
 @NgModule({
   declarations: [ListComponent, RepoCardComponent, RepoSearchComponent, DetailComponent],
-  imports: [CommonModule, FormsModule, RepositoriesRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RepositoriesRoutingModule,
+    StoreModule.forFeature('repositories', reducers),
+    EffectsModule.forFeature([RepositoriesEffects])
+  ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
 })
 export class RepositoriesModule {}
