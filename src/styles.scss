@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Tailwind
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+ * Bootcamp CSS
+ */
 :root {
   --color-background: #fff;
   --color-border: #bbb;
