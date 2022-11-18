@@ -11,6 +11,21 @@ yarn start
 
 ---
 
+### Libraries already installed
+
+```
+// Tailwind
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+// NgRx
+
+ng add @ngrx/store@latest
+ng add @ngrx/store-devtools@latest
+ng add @ngrx/schematics@latest
+```
+
 ### Topics to learn and achieve
 
 1. Modeling our data and why it's important (TS)
