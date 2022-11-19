@@ -7,15 +7,15 @@ import { mockedData } from './data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'JS Heroes Bootcamp';
+  // title = 'JS Heroes Bootcamp';
   data = mockedData;
-  searchValue: string = '';
+  // searchValue: string = '';
 
-  openNewTab(url: string) {
-    window.open(url, '_blank');
-  }
+  // openNewTab(url: string) {
+  //   window.open(url, '_blank');
+  // }
 
-  search() {
-    this.data = mockedData.filter((r) => r.name.includes(this.searchValue));
-  }
+  // search() {
+  //   this.data = mockedData.filter((r) => r.name.includes(this.searchValue));
+  // }
 }
