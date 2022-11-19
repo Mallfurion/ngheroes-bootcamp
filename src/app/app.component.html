@@ -1,18 +1,5 @@
-<!-- <router-outlet></router-outlet> -->
 
-<header>
-  <img class="bear" src="/assets/images/js-heroes-bear.png " alt="" />
-  <div class="header-content">
-    <h1>Welcome to {{ title }}!</h1>
-  </div>
-</header>
+<app-header></app-header>
 <main class="container">
-  <form class="search-form">
-    <input type="text" name="input" class="input" [(ngModel)]="searchValue" />
-    <button class="button" (click)="search()">Search</button>
-  </form>
-  <div class="repo-card" *ngFor="let item of data" [id]="'repo-' + item.id" (click)="openNewTab(item.url)">
-    <h3 class="title">{{ item.name }}</h3>
-    <p class="description">{{ item.description }}</p>
-  </div>
+  <router-outlet></router-outlet>
 </main>
