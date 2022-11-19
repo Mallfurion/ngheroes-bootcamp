@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  token: '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'
 };
